@@ -1,8 +1,7 @@
-.PHONY: dependencies
-
-dependencies:
-	pip install --upgrade pip
-	pip install -r dependencies.txt
+.PHONY: up
 
 up:
-	python manage.py runserver
+	docker-compose up
+
+down:
+	docker-compose down
